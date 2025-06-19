@@ -24,24 +24,42 @@ The best-performing model was **Random Forest** with **99.96% accuracy**, showin
 
 hazardous-neo-classification/
 │
-├── data/ # Dataset info or samples
-│ └── README.md
+├── notebooks/
+│   ├── preprocessing_data.ipynb
+│   ├── baseline/
+│   │   ├── hazardous-neos-prediction-1a.ipynb
+│   │   └── hazardous-neos-prediction-1b.ipynb
+│   ├── hyperparameter_tuning/
+│   │   ├── hazardous-neos-prediction-2a.ipynb
+│   │   ├── hazardous-neos-prediction-2b.ipynb
+│   │   ├── hazardous-neos-prediction-2c.ipynb
+│   │   └── hazardous-neos-prediction-2d.ipynb
 │
-├── notebooks/ # All analysis notebooks
-│ ├── preprocessing_data.ipynb
-│ ├── baseline/
-│ └── hyperparameter_tuning/
+├── figures/
+│   ├── baseline/
+│   │   ├── LG/
+│   │   ├── RF/
+│   │   ├── XGB/
+│   │   ├── SVC/
+│   │   ├── KNN/
+│   │   └── MLP/
+│   ├── hyperparameter_tuning/
+│   │   ├── LG/
+│   │   ├── RF/
+│   │   ├── XGB/
+│   │   ├── SVC/
+│   │   ├── KNN/
+│   │   └── MLP/
 │
-├── figures/ # Visualization output
-│ ├── baseline/
-│ │ ├── LG/ RF/ XGB/ SVC/ KNN/ MLP/
-│ └── hyperparameter_tuning/
-│ ├── LG/ RF/ XGB/ SVC/ KNN/ MLP/
-│
-├── models/ # Saved models (.pkl)
-│ ├── baseline/
-│ └── hyperparameter_tuning/
-│
+├── models/
+│   ├── baseline/
+│   │   ├── model_svc_baseline.pkl
+│   │   ├── model_rf_baseline.pkl
+│   │   └── ...
+│   ├── hyperparameter_tuning/
+│   │   ├── best_svc_model.pkl
+│   │   ├── best_rf_model.pkl
+│   │   └── ...
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -151,6 +169,7 @@ To install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+
 
 👩‍💻 Author
 Wilma Nur Fatimah
